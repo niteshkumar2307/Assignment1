@@ -69,7 +69,11 @@ Scikit-learn
 📌 Future Enhancements
 
 Add Data Augmentation
+
 Add Batch Normalization
+
 Use deeper CNN architectures (ResNet, VGG, MobileNet)
+
 Hyperparameter tuning
+
 Export model to TensorFlow Lite
