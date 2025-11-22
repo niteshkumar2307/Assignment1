@@ -56,7 +56,7 @@ The model achieves strong performance without data augmentation, demonstrating t
 
 | Model | Training Accuracy | Testing Accuracy | Notes |
 |-------|------------------|------------------|-------|
-| CNN (this work) | ~85–90% | ~70–75% | Simple CNN, only normalization applied |
+| CNN (this work) | ~80–85% | ~80–88% | Simple CNN, only normalization applied |
 
 ---
 
