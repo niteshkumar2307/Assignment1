@@ -2,6 +2,7 @@
 
 This project implements a Convolutional Neural Network (CNN) to classify images from the CIFAR-10 dataset using TensorFlow/Keras.
 It includes data loading, preprocessing, model creation, training, evaluation, visualization, and confusion matrix generation.
+
 📌 Project Overview
 
 The CIFAR-10 dataset contains 60,000 color images (32×32×3), categorized into 10 classes:
@@ -16,6 +17,7 @@ horse
 ship
 truck
 The goal of this project is to build an accurate CNN classifier for these categories.
+
 🚀 Features
 
 Loads and preprocesses CIFAR-10 dataset
