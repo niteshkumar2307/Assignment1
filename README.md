@@ -30,4 +30,57 @@ The model achieves strong performance without data augmentation, demonstrating t
 ---
 
 ## Model Architecture
+Conv2D (32 filters, 3×3, ReLU)
+
+MaxPooling2D (2×2)
+
+Conv2D (64 filters, 3×3, ReLU)
+
+MaxPooling2D (2×2)
+
+Flatten
+Dense (128, ReLU)
+
+Dropout (0.5)
+
+Dense (10, Softmax)
+
+
+### Training Configuration
+
+| Parameter | Value |
+|----------|-------|
+| Optimizer | Adam |
+| Loss Function | Categorical Cross-Entropy |
+| Batch Size | 64 |
+| Epochs | 10 |
+| Evaluation Metric | Accuracy |
+
+---
+
+## Results
+
+| Model | Training Accuracy | Testing Accuracy | Notes |
+|-------|------------------|------------------|-------|
+| CNN (this work) | ~85–90% | ~70–75% | Simple CNN, only normalization applied |
+
+---
+
+## Output Visualizations
+
+All visualizations are available inside the `results/` directory:
+
+- Training accuracy curve  
+- Training loss curve  
+- Confusion matrix  
+- Classification report (Precision, Recall, F1-Score)  
+- Sample predictions (model output vs. true labels)
+
+---
+
+## How to Run the Project
+
+### 1. Install Dependencies
+```bash
+pip install -r requirements.txt
 
