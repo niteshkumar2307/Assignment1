@@ -38,6 +38,7 @@ Dataset Details
 32×32 resolution, RGB
 
 10 classes:
+
 airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
 
 50,000 training images
@@ -68,6 +69,7 @@ This project implements a simple yet effective CNN using Python and TensorFlow/K
 Despite having a shallow architecture and no augmentation, the network achieves strong performance with more than 70% testing accuracy, demonstrating effective feature learning through convolutional layers.
 
 ⚙️ Methodology
+
 1️⃣ Preprocessing
 
 Loaded dataset using Keras
@@ -86,11 +88,15 @@ Conv2D (32 filters, 3×3, ReLU)
 MaxPooling2D (2×2)
 
 Conv2D (64 filters, 3×3, ReLU)
+
 MaxPooling2D (2×2)
 
 Flatten
+
 Dense (128, ReLU)
+
 Dropout (0.5)
+
 Dense (10, Softmax)
 
 
@@ -109,7 +115,9 @@ Epochs: 10
 Metrics: Accuracy
 
 ✅ Results
+
 Model	Training Accuracy	Testing Accuracy	Notes
+
 CNN (This Work)	85–90%	70–75%	Simple CNN, normalized inputs
 
 All visualizations are saved in the results/ folder.
@@ -138,4 +146,43 @@ Precision, Recall, and F1-Score for all 10 classes.
 
 Visual representation of model predictions vs. true labels.
 
-All output files are available inside:
+▶️ How to Run the Project
+
+1. Install Dependencies
+
+pip install -r requirements.txt
+
+2. Train the Model
+python src/train.py
+
+3. Evaluate the Model
+python src/evaluate.py
+
+
+All results will appear in the results/ folder.
+
+🛠 Technologies Used
+
+Python
+
+TensorFlow / Keras
+
+NumPy
+
+Matplotlib
+
+Seaborn
+
+Scikit-learn
+
+📌 Future Improvements
+
+Add data augmentation
+
+Add Batch Normalization
+
+Train deeper architectures
+
+Increase training epochs
+
+Hyperparameter tuning
