@@ -70,9 +70,4 @@ All visualizations are available inside the `results/` directory:
 - Classification report (Precision, Recall, F1-Score)  
 - Sample predictions (model output vs. true labels)
 
----
-
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
 
