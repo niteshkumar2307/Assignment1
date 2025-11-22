@@ -1,4 +1,5 @@
 🖼️ CIFAR-10 Image Classification Using Convolutional Neural Networks (CNN)
+
 📌 Overview
 
 This project implements a Convolutional Neural Network (CNN) model for classifying images from the CIFAR-10 dataset as part of a deep learning assignment.
@@ -27,6 +28,7 @@ No augmentation techniques were applied.
 📊 Dataset
 
 Name: CIFAR-10 – 10-Class Natural Image Dataset
+
 Source: Google Dataset Search / Keras Datasets
 
 Dataset Details
