@@ -1,81 +1,139 @@
-🧠 CIFAR-10 Image Classification using CNN
+🖼️ CIFAR-10 Image Classification Using Convolutional Neural Networks (CNN)
+📌 Overview
 
-This project implements a Convolutional Neural Network (CNN) to classify images from the CIFAR-10 dataset using TensorFlow/Keras.
-It includes data loading, preprocessing, model creation, training, evaluation, visualization, and confusion matrix generation.
+This project implements a Convolutional Neural Network (CNN) model for classifying images from the CIFAR-10 dataset as part of a deep learning assignment.
 
-📌 Project Overview
+The task involved:
 
-The CIFAR-10 dataset contains 60,000 color images (32×32×3), categorized into 10 classes:
-airplane
-automobile
-bird
-cat
-deer
-dog
-frog
-horse
-ship
-truck
-The goal of this project is to build an accurate CNN classifier for these categories.
+Selecting a publicly available dataset
 
-🚀 Features
+Applying an ML/DL algorithm covered in class
 
-Loads and preprocesses CIFAR-10 dataset
-Custom CNN model built using Keras Sequential API
-Training with validation split
-Accuracy & loss visualization
-Confusion matrix generation
-Model saved as .h5
-Modular code structure (dataset/model/train/evaluate)
+Implementing the solution in Python
 
-▶️ How to Run the Project
+Providing code, README, and report
 
-1. Install Dependencies
-    pip install -r requirements.txt
-2. Train the Model
-python src/train.py
+The model achieves:
 
-This will:
-Train the CNN
-Save the model inside: saved_model/model.h5
-Generate accuracy & loss plots in results/
+Metric	Value
+Training Accuracy	~85–90%*
+Testing Accuracy	~70–75%*
 
-📊 Evaluation
-Run evaluation:
-python src/evaluate.py
+(*Performance varies based on training duration and hyperparameters.)
 
-This will:
-Load trained model
-Predict on the test dataset
-Generate a confusion matrix (results/confusion_matrix.png)
+Simple normalization was used.
+No augmentation techniques were applied.
 
-📈 Example Output
+📊 Dataset
 
-✔ Accuracy Curve
-Shows training vs validation accuracy across epochs.
+Name: CIFAR-10 – 10-Class Natural Image Dataset
+Source: Google Dataset Search / Keras Datasets
 
-✔ Loss Curve
-Shows training vs validation loss across epochs.
+Dataset Details
 
-✔ Confusion Matrix
-Displays class-wise classification performance.
+60,000 color images
 
-🛠 Tech Stack
-Python 3.x
-TensorFlow / Keras
-NumPy
-Matplotlib
-Seaborn
-Scikit-learn
+32×32 resolution, RGB
 
-📌 Future Enhancements
+10 classes:
+airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
 
-Add Data Augmentation
+50,000 training images
 
-Add Batch Normalization
+10,000 test images
 
-Use deeper CNN architectures (ResNet, VGG, MobileNet)
+Preprocessing
 
-Hyperparameter tuning
+Pixel values normalized: 0–255 → 0–1
 
-Export model to TensorFlow Lite
+Resized/reshaped to (32, 32, 3)
+
+Labels converted to one-hot encoded vectors
+
+Dataset split into:
+
+Training
+
+Validation
+
+Testing
+
+📝 Abstract
+
+The CIFAR-10 dataset is a widely used benchmark for evaluating image classification algorithms.
+This project implements a simple yet effective CNN using Python and TensorFlow/Keras to classify CIFAR-10 images.
+
+Despite having a shallow architecture and no augmentation, the network achieves strong performance with more than 70% testing accuracy, demonstrating effective feature learning through convolutional layers.
+
+⚙️ Methodology
+1️⃣ Preprocessing
+
+Loaded dataset using Keras
+
+Converted pixel values to floating-point
+
+Scaled pixel values to [0, 1]
+
+One-hot encoded labels
+
+2️⃣ CNN Architecture
+
+The CNN contains the following layers:
+
+Conv2D (32 filters, 3×3, ReLU)
+MaxPooling2D (2×2)
+
+Conv2D (64 filters, 3×3, ReLU)
+MaxPooling2D (2×2)
+
+Flatten
+Dense (128, ReLU)
+Dropout (0.5)
+Dense (10, Softmax)
+
+
+This architecture is highly suitable for CIFAR-10, offering a balance between performance and computational efficiency.
+
+3️⃣ Training
+
+Optimizer: Adam
+
+Loss: Categorical Cross-Entropy
+
+Batch Size: 64
+
+Epochs: 10
+
+Metrics: Accuracy
+
+✅ Results
+Model	Training Accuracy	Testing Accuracy	Notes
+CNN (This Work)	85–90%	70–75%	Simple CNN, normalized inputs
+
+All visualizations are saved in the results/ folder.
+
+📷 Output Visualizations
+
+This project includes the following outputs:
+
+🔹 Training Accuracy Curve
+
+Shows improvement in accuracy over epochs.
+
+🔹 Training Loss Curve
+
+Depicts loss reduction during training.
+
+🔹 Confusion Matrix
+
+Provides class-wise performance evaluation.
+
+🔹 Classification Report
+
+Precision, Recall, and F1-Score for all 10 classes.
+
+🔹 Sample Predictions
+
+Visual representation of model predictions vs. true labels.
+
+All output files are available inside:
