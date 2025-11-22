@@ -30,20 +30,14 @@ The model achieves strong performance without data augmentation, demonstrating t
 ---
 
 ## Model Architecture
-Conv2D (32 filters, 3×3, ReLU)
-
-MaxPooling2D (2×2)
-
-Conv2D (64 filters, 3×3, ReLU)
-
-MaxPooling2D (2×2)
-
-Flatten
-Dense (128, ReLU)
-
-Dropout (0.5)
-
-Dense (10, Softmax)
+- Conv2D (32 filters, 3×3, ReLU)
+- MaxPooling2D (2×2)
+- Conv2D (64 filters, 3×3, ReLU)
+- MaxPooling2D (2×2)
+- Flatten
+  Dense (128, ReLU)
+- Dropout (0.5)
+  Dense (10, Softmax)
 
 
 ### Training Configuration
@@ -77,8 +71,6 @@ All visualizations are available inside the `results/` directory:
 - Sample predictions (model output vs. true labels)
 
 ---
-
-## How to Run the Project
 
 ### 1. Install Dependencies
 ```bash
